@@ -98,6 +98,8 @@ class CameraManager(private val context: Context) {
 
         var recordingStartTime: Long = 0
 
+@Suppress("MissingPermission")
+
         activeRecording = videoCapture.output
             .prepareRecording(context, outputOptions)
             .withAudioEnabled()
